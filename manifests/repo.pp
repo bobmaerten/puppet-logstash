@@ -41,7 +41,7 @@ class logstash::repo {
         location    => "http://packages.elasticsearch.org/logstash/${logstash::repo_version}/debian",
         release     => 'stable',
         repos       => 'main',
-        key         => 'D88E42B4',
+        key         => 'D27D666CD88E42B4',
         key_server  => 'pgp.mit.edu',
         include_src => false,
       }
@@ -65,7 +65,7 @@ class logstash::repo {
         'OpenSuSE': {
           $centos_version = 'centos'
           $gpg_key = 'GPG-KEY-elasticsearch'
-          $gpg_id = 'D88E42B4'
+          $gpg_id = 'D27D666CD88E42B4'
         }
         default: {
           fail("Unknown Operating system (${::operatingsystem})for Suse family")
